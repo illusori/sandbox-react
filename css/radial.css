@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+}
+
+.radial-button-container {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+.radial-button-container.child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: center center;
+}
+
+.radial-button {
+    width: 60px;
+    height: 60px;
+    background-color: #936;
+    border: solid 1px #613;
+    border-top-color: #c9b;
+    border-left-color: #c9b;
+    border-radius: 50%;
+
+    transition: .5s ease-in;
+}
+
+.radial-button.selected {
+    transform: rotateY(180deg);
+}
+
+.radial-button-children {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+/*    border: thin blue solid; */
+}
+
+.radial-button-children {
+    transition: .5s ease-in;
+    visibility: hidden;
+/*    opacity: 0.01; */
+}
+
+.radial-button-children.selected {
+    visibility: visible;
+/*    opacity: 1; */
+}
+
+.center-outside { position: relative; display: table; height: 100%; width: 100%; }
+.center-inside { display: table-cell; vertical-align: middle; text-align: center; padding: 5px; }
